@@ -1,0 +1,26 @@
+{
+  "name": "devitek/laravel-correlational-id",
+  "description": "A package to add Correlational ID to Laravel",
+  "version": "1.0.0",
+  "type": "library",
+  "require": {
+    "ramsey/uuid": "^3.4",
+    "illuminate/log": "^5.0",
+    "illuminate/http": "^5.0",
+    "sentry/sentry-laravel": "^0.3.0",
+    "illuminate/contracts": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Devitek\\Laravel\\CorrelationalId\\": "src"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thomas Sieffert",
+      "email": "thomas.sieffert@devitek.fr"
+    }
+  ],
+  "minimum-stability": "stable"
+}
