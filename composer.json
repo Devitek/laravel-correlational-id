@@ -5,10 +5,10 @@
   "type": "library",
   "require": {
     "ramsey/uuid": "^3.4",
-    "illuminate/log": "^5.0",
-    "illuminate/http": "^5.0",
+    "illuminate/log": "^5.2",
+    "illuminate/http": "^5.2",
     "sentry/sentry-laravel": "^0.3.0",
-    "illuminate/contracts": "^5.0"
+    "illuminate/contracts": "^5.2"
   },
   "autoload": {
     "psr-4": {
