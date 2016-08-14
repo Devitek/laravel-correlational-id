@@ -1,7 +1,7 @@
 {
   "name": "devitek/laravel-correlational-id",
   "description": "A package to add Correlational ID to Laravel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "library",
   "require": {
     "ramsey/uuid": "^3.4",

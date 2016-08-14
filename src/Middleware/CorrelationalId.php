@@ -5,6 +5,7 @@ namespace Devitek\Laravel\CorrelationalId\Middleware;
 use Closure;
 use Illuminate\Http\Response;
 use Ramsey\Uuid\Uuid;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class CorrelationalId
 {
@@ -30,9 +31,16 @@ class CorrelationalId
         /** @var Response $response */
         $response = $next($request);
 
-        $response->withHeaders([
-            self::HEADER => $correlationalId,
-        ]);
+        if ($response instanceof RedirectResponse) {
+            /** @var RedirectResponse $response */
+            $response->headers->add([
+                self::HEADER => $correlationalId,
+            ]);
+        } else {
+            $response->withHeaders([
+                self::HEADER => $correlationalId,
+            ]);
+        }
 
         return $response;
     }
